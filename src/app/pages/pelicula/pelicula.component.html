@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="row">
+        <div *ngFor="let movie of _serverApi.moviesApi" class="card text-center col-md-4 col-sm-6 carta">
+                <div class="card-header">
+                    <h2 class="my-0 shadow-sm">
+                        {{movie.title}} 
+                    </h2>
+                </div>
+    
+                <div class="card-body">
+                    <span>
+                        <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{movie.poster_path}}" >
+                    </span>
+                    <div class="card-footer mt-3">
+                        <p>
+                            {{movie.overview}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+    </div>
+</section>

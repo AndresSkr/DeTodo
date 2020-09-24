@@ -1,0 +1,36 @@
+<section class="container">
+    <div class="row">
+        <div *ngFor="let pelicula of _servicioPelicula.lstPeliculas" class="card text-center col-md-4 col-sm-6 carta">
+            <div  class="card-header my-0">
+                <h2 class="shadow-sm">{{ pelicula.nombre }}</h2>
+                <p class="my-0 text-uppercase">{{pelicula.categoria}}</p>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <p class="text-uppercase">codigo: {{ pelicula.cod }}</p>
+                    <p class="text-uppercase">Sala: {{ pelicula.sala }}</p>
+                </div>
+
+                <div class="box card-img-top ">
+                    <img [src]="pelicula.url">
+                </div>
+
+                <!-- <div class="card-text mt-3">
+                    <h4>
+                        {{ pelicula.precio }} $$
+                    </h4>
+                    <a [routerLink]="['/pelicula',pelicula.cod]">
+                        <input class="btn btn-primary" type="button" value="Comprar Boleto">
+                    </a>
+                </div> -->
+            </div>
+
+            <div class="card-footer">
+                <p>{{pelicula.descripcion}}</p>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

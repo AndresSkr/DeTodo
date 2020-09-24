@@ -1,0 +1,7 @@
+.box img{
+  width: 100%;
+  height: auto;
+}
+.carta:hover{
+  background-color: gray;
+}
