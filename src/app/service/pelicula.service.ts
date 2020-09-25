@@ -36,7 +36,6 @@ export class PeliculaService {
       this.http.get(url).subscribe(
         (res:any)=>{
           this.moviesApi= res['results'];
-          console.log(res['results']);
           resolve();
         }
       ); 

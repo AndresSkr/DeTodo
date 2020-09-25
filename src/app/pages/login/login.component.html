@@ -1,0 +1,27 @@
+<section class="content">
+
+    <h1 class="logo">Sign <span>In</span></h1>
+    <div class="wrapper">
+
+        <div class="login-components px-5 py-2">
+
+            <div class="title-login mt-3 mb-4 shadow-sm">
+                <label>
+                        Soy el Mejor
+                    </label>
+            </div>
+            <div>
+                <label>email</label>
+                <input type="email" placeholder="keloke@gmail.com" #email>
+
+                <label>Password</label>
+                <input type="password" placeholder="**********" #pass>
+            </div>
+
+            <p>Deseas <span><a routerLink="/registro">registrarte</a></span>?</p>
+
+            <button type="submit" (click)="onLogin(email.value,pass.value)">Sign in</button>
+        </div>
+
+    </div>
+</section>

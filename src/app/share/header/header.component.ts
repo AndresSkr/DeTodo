@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthFireService } from 'src/app/service/auth-fire.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isSignIn = false;
+  constructor(public atf: AuthFireService) {
 
-  ngOnInit(): void {
+    if (localStorage.getItem('user') != null) {
+      this.isSignIn = true
+    }
+    else {
+      this.isSignIn = false
+    }
   }
+  
+  ngOnInit(): void {
 
+  }
+  logout() {
+    this.atf.logOut();
+    this.isSignIn = false;
+    console.log("ya no te encuentras logueado");
+  }
 }
