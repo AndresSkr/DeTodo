@@ -8,8 +8,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
 
 
 const routes: Routes = [
-  {path:'login', component:LoginComponent},
-  {path:'registro', component: RegistroComponent},
+  {path:'login', component: LoginComponent},
+ /*  {path:'registro', component: RegistroComponent}, */
   {path:'inicio', component: InicioComponent},
   {path:'listado', component: ListadoComponent},
   {path:'pelicula', component: PeliculaComponent},

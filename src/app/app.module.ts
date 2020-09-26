@@ -12,6 +12,8 @@ import { FooterComponent } from './share/footer/footer.component';
 import { HeaderComponent } from './share/header/header.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RegistroComponent } from './pages/registro/registro.component';
 
 
@@ -30,6 +32,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(
       {
         apiKey: "AIzaSyCdyf6_hIjM4OkRWgV-FpdhCl19mwozXcI",
@@ -41,7 +45,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
         appId: "1:263021406171:web:80db296f6f9c2b9b5f69fe",
         measurementId: "G-Z26XMB0M8L"
       }
-    )
+    ),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

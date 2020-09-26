@@ -41,10 +41,12 @@ export class PeliculaService {
       ); 
 
     })
-
-    
-
-    
-
   }
+
+  
+  /* private nodeApi(){
+   this.http.get('http://localhost:3000/api/movies').subscribe((res:any)=>{
+    console.log(res);
+   });
+  } */
 }

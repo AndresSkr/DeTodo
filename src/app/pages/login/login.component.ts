@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { async } from '@angular/core/testing';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthFireService } from 'src/app/service/auth-fire.service';
+
 
 @Component({
   selector: 'app-login',
@@ -8,20 +9,27 @@ import { AuthFireService } from 'src/app/service/auth-fire.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(public atf: AuthFireService) { }
+  LoginFrom:FormGroup;
+  constructor(public atf: AuthFireService,
+    public fb:FormBuilder ) { }
 
   ngOnInit(): void {
+
+
+    this.LoginFrom=this.fb.group({
+      email:['',Validators.required],
+      password:['',Validators.required],
+    })
   }
 
-  onLogin(email: string, pass: string) {
+  onLogin() {
 
-    this.atf.login(email, pass)
+    var {email , password}=this.LoginFrom.value
+    this.atf.login(email, password)
       .then(s => {
         if (!s) {
           alert("Correo o contraseña incorrectas")
         }
       });
-
   }
-
 }
