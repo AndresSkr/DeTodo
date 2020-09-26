@@ -10,13 +10,13 @@ import { AuthFireService } from 'src/app/service/auth-fire.service';
 })
 export class LoginComponent implements OnInit {
   LoginFrom:FormGroup;
+
   constructor(public atf: AuthFireService,
     public fb:FormBuilder ) { }
 
   ngOnInit(): void {
 
-
-    this.LoginFrom=this.fb.group({
+     this.LoginFrom=this.fb.group({
       email:['',Validators.required],
       password:['',Validators.required],
     })

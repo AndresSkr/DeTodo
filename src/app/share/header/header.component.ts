@@ -11,12 +11,12 @@ export class HeaderComponent implements OnInit {
   isSignIn = false;
   constructor(public atf: AuthFireService) {
 
-    if (localStorage.getItem('user') != null) {
+   if (localStorage.getItem('user') != null) {
       this.isSignIn = true
     }
     else {
       this.isSignIn = false
-    }
+    } 
   }
   
   ngOnInit(): void {

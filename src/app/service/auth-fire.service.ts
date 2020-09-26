@@ -33,7 +33,6 @@ export class AuthFireService {
   async register(email: string, pass: string) {
     try {
       const user = await this.afAuth.createUserWithEmailAndPassword(email, pass);
-      window.location.replace('#/login');
       return true;
     } catch (error) {
       alert(error['message']);
